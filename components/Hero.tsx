@@ -45,9 +45,11 @@ export const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="primary">
-              View Current Opportunities <ArrowRight className="w-4 h-4" />
-            </Button>
+            <a href="#contact">
+              <Button variant="primary">
+                View Current Opportunities <ArrowRight className="w-4 h-4" />
+              </Button>
+            </a>
             <Button variant="secondary">
               <Download className="w-4 h-4" /> Download Investor Deck
             </Button>

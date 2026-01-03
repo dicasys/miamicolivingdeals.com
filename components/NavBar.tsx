@@ -37,7 +37,9 @@ export const NavBar = () => {
               {link.name}
             </a>
           ))}
-          <Button variant="primary">Get Started</Button>
+          <a href="#contact">
+            <Button variant="primary">Get Started</Button>
+          </a>
         </div>
 
         {/* Mobile Toggle */}
@@ -64,7 +66,9 @@ export const NavBar = () => {
               {link.name}
             </a>
           ))}
-          <Button variant="primary" fullWidth>Get Started</Button>
+          <a href="#contact">
+            <Button variant="primary" fullWidth>Get Started</Button>
+          </a>
         </div>
       )}
     </nav>
