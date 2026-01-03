@@ -24,17 +24,19 @@ export const Contact = () => {
             const data = await response.json();
 
             if (data.success) {
-                setResult("Form Submitted Successfully");
+                setResult("Thank you! Your message has been sent to our team.");
                 setIsSuccess(true);
                 // Reset the form
-                (event.target as HTMLFormElement).reset();
+                event.currentTarget.reset();
             } else {
                 console.error("Error submitting form", data);
-                setResult(data.message);
+                setIsSuccess(false);
+                setResult(data.message || "Something went wrong. Please try again.");
             }
         } catch (error) {
             console.error("Error submitting form", error);
-            setResult("Something went wrong!");
+            setIsSuccess(false);
+            setResult("Connection error. Please check your internet and try again.");
         } finally {
             setIsSubmitting(false);
         }
