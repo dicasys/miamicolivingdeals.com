@@ -1,8 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Send } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export const Contact = () => {
+    const [isSuccess, setIsSuccess] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [result, setResult] = useState("");
+
+    const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        setIsSubmitting(true);
+        setResult("Sending....");
+
+        // Create FormData object from the form
+        const formData = new FormData(event.currentTarget);
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                setResult("Form Submitted Successfully");
+                setIsSuccess(true);
+                // Reset the form
+                (event.target as HTMLFormElement).reset();
+            } else {
+                console.error("Error submitting form", data);
+                setResult(data.message);
+            }
+        } catch (error) {
+            console.error("Error submitting form", error);
+            setResult("Something went wrong!");
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
     return (
         <div className="pt-20">
             {/* Contact Hero Section */}
@@ -43,12 +80,15 @@ export const Contact = () => {
                         >
                             <h3 className="font-serif text-2xl text-white mb-6 text-center">Send us a Message</h3>
 
-                            <form action="https://api.web3forms.com/submit" method="POST" className="space-y-6">
+                            <form onSubmit={onSubmit} className="space-y-6">
                                 {/* Web3Forms Access Key */}
                                 <input type="hidden" name="access_key" value="d5a5092d-3cb7-49fd-bf2d-5700c5f870cf" />
 
                                 {/* From Name for Email Subject */}
                                 <input type="hidden" name="from_name" value="Miami Coliving Deals" />
+
+                                {/* Redirect Fallback */}
+                                <input type="hidden" name="redirect" value="https://miamicolivingdeals.com/thanks.html" />
 
                                 <div className="space-y-2">
                                     <label htmlFor="name" className="text-sm font-medium text-slate-300">Full Name</label>
@@ -100,14 +140,25 @@ export const Contact = () => {
 
                                 <button
                                     type="submit"
-                                    className="w-full relative px-8 py-4 rounded-md font-semibold text-sm tracking-wide transition-all duration-300 flex items-center justify-center gap-2 overflow-hidden group bg-brand-gold text-brand-dark hover:bg-white hover:text-brand-dark shadow-[0_0_20px_rgba(251,191,36,0.3)] hover:shadow-[0_0_30px_rgba(251,191,36,0.6)]"
+                                    disabled={isSubmitting}
+                                    className="w-full relative px-8 py-4 rounded-md font-semibold text-sm tracking-wide transition-all duration-300 flex items-center justify-center gap-2 overflow-hidden group bg-brand-gold text-brand-dark hover:bg-white hover:text-brand-dark shadow-[0_0_20px_rgba(251,191,36,0.3)] hover:shadow-[0_0_30px_rgba(251,191,36,0.6)] disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
                                     <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent z-0"></div>
                                     <span className="relative z-10 flex items-center gap-2">
-                                        Submit <Send className="w-4 h-4" />
+                                        {isSubmitting ? 'Sending...' : 'Submit'} <Send className="w-4 h-4" />
                                     </span>
                                 </button>
                             </form>
+
+                            {isSuccess && (
+                                <motion.div
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    className="mt-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-200 text-center font-medium"
+                                >
+                                    Thank you! Your message has been sent to our team.
+                                </motion.div>
+                            )}
                         </motion.div>
                     </div>
                 </div>
