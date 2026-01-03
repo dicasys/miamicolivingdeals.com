@@ -1,0 +1,45 @@
+{
+  "name": "miami-co-living-deals",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Modern landing page for Miami co-living real estate investment opportunities",
+  "author": "Miami Co-Living Deals",
+  "license": "MIT",
+  "homepage": "https://github.com/dicasys/miamicolivingdeals.com#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dicasys/miamicolivingdeals.com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dicasys/miamicolivingdeals.com/issues"
+  },
+  "keywords": [
+    "real-estate",
+    "co-living",
+    "miami",
+    "investment",
+    "react",
+    "typescript",
+    "vite",
+    "tailwindcss"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "lucide-react": "^0.562.0",
+    "react-dom": "^19.2.3",
+    "react": "^19.2.3",
+    "framer-motion": "^12.23.26"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}
