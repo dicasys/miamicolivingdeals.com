@@ -43,12 +43,20 @@ export const Contact = () => {
                         >
                             <h3 className="font-serif text-2xl text-white mb-6 text-center">Send us a Message</h3>
 
-                            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+                            <form action="https://api.web3forms.com/submit" method="POST" className="space-y-6">
+                                {/* Web3Forms Access Key */}
+                                <input type="hidden" name="access_key" value="d5a5092d-3cb7-49fd-bf2d-5700c5f870cf" />
+
+                                {/* From Name for Email Subject */}
+                                <input type="hidden" name="from_name" value="Miami Coliving Deals" />
+
                                 <div className="space-y-2">
                                     <label htmlFor="name" className="text-sm font-medium text-slate-300">Full Name</label>
                                     <input
                                         type="text"
                                         id="name"
+                                        name="name"
+                                        required
                                         className="w-full bg-brand-dark border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors"
                                         placeholder="John Doe"
                                     />
@@ -59,6 +67,8 @@ export const Contact = () => {
                                     <input
                                         type="email"
                                         id="email"
+                                        name="email"
+                                        required
                                         className="w-full bg-brand-dark border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors"
                                         placeholder="john@example.com"
                                     />
@@ -69,6 +79,8 @@ export const Contact = () => {
                                     <input
                                         type="text"
                                         id="subject"
+                                        name="subject"
+                                        required
                                         className="w-full bg-brand-dark border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors"
                                         placeholder="Investment Inquiry"
                                     />
@@ -78,7 +90,9 @@ export const Contact = () => {
                                     <label htmlFor="message" className="text-sm font-medium text-slate-300">Message</label>
                                     <textarea
                                         id="message"
+                                        name="message"
                                         rows={4}
+                                        required
                                         className="w-full bg-brand-dark border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors resize-none"
                                         placeholder="Tell us about your investment goals..."
                                     ></textarea>
