@@ -1,10 +1,11 @@
-import React from 'react';
+
 import { SectionHeading } from './ui/SectionHeading';
 import { Building2, RefreshCw, Receipt } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const FeatureCard = ({ icon: Icon, title, description }: any) => (
-  <motion.div 
+  <motion.div
     whileHover={{ y: -5 }}
     className="bg-brand-surface p-10 rounded-2xl border border-white/5 text-center group hover:border-brand-gold/30 transition-all duration-300"
   >
@@ -19,30 +20,32 @@ const FeatureCard = ({ icon: Icon, title, description }: any) => (
 );
 
 export const FinancingSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="advantages" className="py-24 bg-brand-dark relative">
       <div className="container mx-auto px-6">
-        <SectionHeading 
-          eyebrow="Financing Wizardry"
-          title="Superior Debt & Tax Advantages"
-          description="We don't just find great properties; we utilize strategic financing to maximize your internal rate of return (IRR)."
+        <SectionHeading
+          eyebrow={t('financing.eyebrow')}
+          title={t('financing.title')}
+          description={t('financing.description')}
         />
 
         <div className="grid md:grid-cols-3 gap-8">
-          <FeatureCard 
+          <FeatureCard
             icon={Building2}
-            title="Residential Debt, Commercial Returns"
-            description="Leverage 30-year fixed-rate debt on properties that produce multifamily-level cash flow, avoiding the volatility of commercial bridge loans."
+            title={t('financing.features.debt.title')}
+            description={t('financing.features.debt.description')}
           />
-          <FeatureCard 
+          <FeatureCard
             icon={RefreshCw}
-            title="Velocity of Capital"
-            description="Our high cash-flow model allows for swift refinancing maneuvers, often enabling investors to recoup their initial capital tax-free within months."
+            title={t('financing.features.velocity.title')}
+            description={t('financing.features.velocity.description')}
           />
-          <FeatureCard 
+          <FeatureCard
             icon={Receipt}
-            title="Tax Optimization"
-            description="Maximize depreciation benefits and leverage cost segregation studies to significantly reduce your tax burden from day one."
+            title={t('financing.features.tax.title')}
+            description={t('financing.features.tax.description')}
           />
         </div>
       </div>

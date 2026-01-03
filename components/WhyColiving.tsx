@@ -1,10 +1,11 @@
-import React from 'react';
+
 import { SectionHeading } from './ui/SectionHeading';
 import { TrendingUp, DollarSign, Zap, ShieldCheck } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const StatCard = ({ icon: Icon, value, title, description, delay }: any) => (
-  <motion.div 
+  <motion.div
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
@@ -24,42 +25,44 @@ const StatCard = ({ icon: Icon, value, title, description, delay }: any) => (
 );
 
 export const WhyColiving = () => {
+  const { t } = useTranslation();
+
   const stats = [
     {
       icon: TrendingUp,
       value: "30-50%",
-      title: "Higher Operating Margins",
-      description: "Compared to conventional multifamily buildings, maximizing efficiency."
+      title: t('whyColiving.stats.margins.title'),
+      description: t('whyColiving.stats.margins.description')
     },
     {
       icon: DollarSign,
       value: "3X",
-      title: "Rental Income",
-      description: "Triple the income of standard investments on the same street."
+      title: t('whyColiving.stats.income.title'),
+      description: t('whyColiving.stats.income.description')
     },
     {
       icon: Zap,
-      value: "Day 1",
-      title: "Positive Cash Flow",
-      description: "Through optimized per-square-foot rents and turnkey delivery."
+      value: t('whyColiving.stats.cashflow.value') || "Day 1", // Fallback or add to json if localized
+      title: t('whyColiving.stats.cashflow.title'),
+      description: t('whyColiving.stats.cashflow.description')
     },
     {
       icon: ShieldCheck,
       value: "100%",
-      title: "Recession-Resistant",
-      description: "Affordability is the ultimate hedge in any economy."
+      title: t('whyColiving.stats.recession.title'),
+      description: t('whyColiving.stats.recession.description')
     }
   ];
 
   return (
     <section id="why-coliving" className="py-24 bg-brand-dark relative">
       <div className="container mx-auto px-6">
-        <SectionHeading 
-          eyebrow="Why Coliving?" 
-          title="Unprecedented Financial Performance"
-          description="Traditional residential investing is facing a squeeze. Coliving solves this by maximizing the efficiency of a property's footprint."
+        <SectionHeading
+          eyebrow={t('whyColiving.eyebrow')}
+          title={t('whyColiving.title')}
+          description={t('whyColiving.description')}
         />
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat, index) => (
             <StatCard key={index} {...stat} delay={index * 0.1} />

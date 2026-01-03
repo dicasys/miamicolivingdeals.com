@@ -1,9 +1,12 @@
-import React from 'react';
+
 import { Button } from './ui/Button';
 import { ArrowRight, Download } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTranslation, Trans } from 'react-i18next';
 
 export const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -31,27 +34,28 @@ export const Hero = () => {
           className="max-w-5xl mx-auto"
         >
           <div className="inline-block mb-6 px-4 py-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/10 backdrop-blur-sm">
-            <span className="text-brand-gold text-xs font-bold tracking-widest uppercase">High-Yield Real Estate Investments</span>
+            <span className="text-brand-gold text-xs font-bold tracking-widest uppercase">{t('hero.tagline')}</span>
           </div>
 
           <h1 className="font-serif text-5xl md:text-7xl font-medium leading-[1.1] text-white mb-8">
-            The Future of Real Estate Yield: <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-amber-200">High-Margin Coliving</span> Investments
+            <Trans i18nKey="hero.headline">
+              The Future of Real Estate Yield: <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-amber-200">High-Margin Coliving</span> Investments
+            </Trans>
           </h1>
 
           <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-12 font-light leading-relaxed">
-            Stop settling for single-digit returns. Leverage the "Space-as-a-Service" model
-            to achieve multifamily margins with residential debt.
+            {t('hero.description')}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a href="#contact">
               <Button variant="primary">
-                View Current Opportunities <ArrowRight className="w-4 h-4" />
+                {t('hero.viewOpportunities')} <ArrowRight className="w-4 h-4" />
               </Button>
             </a>
             <Button variant="secondary">
-              <Download className="w-4 h-4" /> Download Investor Deck
+              <Download className="w-4 h-4" /> {t('hero.downloadDeck')}
             </Button>
           </div>
         </motion.div>

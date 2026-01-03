@@ -1,0 +1,188 @@
+{
+    "common": {
+        "loading": "Cargando..."
+    },
+    "nav": {
+        "whyColiving": "Por qué Coliving",
+        "theModel": "El Modelo",
+        "advantages": "Ventajas",
+        "experience": "Experiencia",
+        "getStarted": "Empezar"
+    },
+    "hero": {
+        "tagline": "Inversiones Inmobiliarias de Alto Rendimiento",
+        "headline": "El Futuro del Rendimiento Inmobiliario: Inversiones en <1>Coliving de Alto Margen</1>",
+        "description": "Deje de conformarse con retornos de un solo dígito. Aproveche el modelo \"Space-as-a-Service\" para lograr márgenes multifamiliares con deuda residencial.",
+        "viewOpportunities": "Ver Oportunidades",
+        "downloadDeck": "Descargar Dossier"
+    },
+    "whyColiving": {
+        "eyebrow": "¿Por qué Coliving?",
+        "title": "Rendimiento Financiero Sin Precedentes",
+        "description": "La inversión residencial tradicional enfrenta presiones. El Coliving resuelve esto maximizando la eficiencia de la huella de la propiedad.",
+        "stats": {
+            "margins": {
+                "title": "Mayores Márgenes Operativos",
+                "description": "Comparado con edificios multifamiliares convencionales, maximizando la eficiencia."
+            },
+            "income": {
+                "title": "Ingresos por Alquiler",
+                "description": "Triple de ingresos que inversiones estándar en la misma calle."
+            },
+            "cashflow": {
+                "title": "Flujo de Caja Positivo",
+                "description": "A través de rentas optimizadas por pie cuadrado y entrega llave en mano."
+            },
+            "recession": {
+                "title": "Resistente a la Recesión",
+                "description": "La asequibilidad es la mejor cobertura en cualquier economía."
+            }
+        }
+    },
+    "analogy": {
+        "eyebrow": "La Ventaja Multi-Motor",
+        "title": "\"Invertir en alquileres tradicionales es como volar un avión monomotor...\"",
+        "p1": "Si ese único motor (tu inquilino) falla, el avión cae.",
+        "p2": "El Coliving es un <1>jet multi-motor</1>. Si un motor falla, los otros mantienen la inversión en el aire avanzando hacia su destino financiero sin interrupciones.",
+        "cards": {
+            "diversified": {
+                "title": "Ingresos Diversificados",
+                "description": "El alquiler se cobra de múltiples miembros, asegurando que una sola vacante nunca reduzca a cero tu flujo de caja mensual."
+            },
+            "counterCyclical": {
+                "title": "Demanda Contra-Cíclica",
+                "description": "A medida que los consumidores buscan reducir gastos, aumenta la demanda de opciones de vivienda compartida de alta calidad y menor costo."
+            }
+        }
+    },
+    "floorplan": {
+        "title": "Planos Optimizados",
+        "description": "Al transformar un diseño tradicional en un espacio de coliving de alta utilidad —como convertir una casa de tres habitaciones en un activo de siete— desbloqueamos un nuevo nivel de rentabilidad."
+    },
+    "demographics": {
+        "eyebrow": "Capturando Demanda Masiva",
+        "title": "Apuntando al Segmento Más Grande de la Fuerza Laboral",
+        "description": "Nos enfocamos en Millennials y Gen Z — las demografías que redefinen cómo vive América. Los inquilinos modernos valoran la flexibilidad, la economía compartida y la conveniencia todo incluido sobre los contratos a largo plazo.",
+        "tags": {
+            "target": "Demografía Objetivo",
+            "preferences": "Preferencias Modernas",
+            "tech": "Vida Tecnológica"
+        },
+        "stats": {
+            "households": {
+                "title": "Hogares unipersonales",
+                "description": "Ganan menos de $35K/año y están actualmente fuera del mercado tradicional."
+            },
+            "generation": {
+                "title": "Millennials y Gen Z",
+                "description": "Prefieren flexibilidad y conveniencia todo incluido sobre la propiedad."
+            },
+            "solution": {
+                "title": "Solución a Crisis de Vivienda",
+                "description": "Abordando la brecha de asequibilidad nacional directamente."
+            }
+        }
+    },
+    "financing": {
+        "eyebrow": "Maestría Financiera",
+        "title": "Ventajas Superiores de Deuda e Impuestos",
+        "description": "No solo encontramos grandes propiedades; utilizamos financiación estratégica para maximizar tu tasa interna de retorno (TIR).",
+        "features": {
+            "debt": {
+                "title": "Deuda Residencial, Retornos Comerciales",
+                "description": "Aprovecha deuda de tasa fija a 30 años en propiedades que producen flujo de caja nivel multifamiliar, evitando la volatilidad de préstamos puente comerciales."
+            },
+            "velocity": {
+                "title": "Velocidad del Capital",
+                "description": "Nuestro modelo de alto flujo de caja permite maniobras rápidas de refinanciamiento, a menudo permitiendo recuperar el capital inicial libre de impuestos en meses."
+            },
+            "tax": {
+                "title": "Optimización Fiscal",
+                "description": "Maximiza beneficios de depreciación y apalanca estudios de segregación de costos para reducir significativamente tu carga fiscal desde el primer día."
+            }
+        }
+    },
+    "process": {
+        "eyebrow": "Lo Que Hacemos",
+        "title": "La Ventaja del Coliving",
+        "description": "Nos encargamos de todo para que disfrutes de ingresos pasivos de tu inversión.",
+        "steps": {
+            "marketing": {
+                "title": "Marketing de Propiedad",
+                "subtitle": "Maximizando la Exposición",
+                "description": "Empleamos técnicas de marketing estratégico para maximizar la exposición de tu propiedad y atraer inquilinos de calidad."
+            },
+            "relations": {
+                "title": "Relaciones con Inquilinos",
+                "subtitle": "Construyendo Relaciones Sólidas",
+                "description": "Nuestro enfoque va más allá de llenar tu propiedad. Ofrecemos una selección minuciosa con cuestionarios detallados y priorizamos la comunicación abierta."
+            },
+            "maintenance": {
+                "title": "Mantenimiento de Propiedad",
+                "subtitle": "Mantenimiento Eficiente",
+                "description": "Supervisamos todos los aspectos del mantenimiento, desde el cuidado regular hasta reparaciones de emergencia. Nuestro objetivo es mantener el valor de tu propiedad asegurando la satisfacción del inquilino."
+            }
+        }
+    },
+    "testimonials": {
+        "eyebrow": "Testimonios",
+        "title": "Lo Que Dicen Nuestros Inversores",
+        "description": "Escuche directamente de inversores reales sobre su experiencia con las inversiones en coliving en Miami."
+    },
+    "cta": {
+        "eyebrow": "Comienza Tu Viaje",
+        "title": "¿Listo para Superar al Mercado?",
+        "description": "No esperes al próximo ciclo de mercado para encontrar rendimiento. Únete a los inversores que ya están escalando sus carteras con la clase de activo más resistente en el sector inmobiliario moderno.",
+        "button": "Agenda una Llamada con Nuestro Equipo",
+        "footer": "Descubre cómo podemos ayudarte a construir una cartera de alto rendimiento a prueba de recesión hoy."
+    },
+    "footer": {
+        "description": "Transformando la inversión inmobiliaria a través de oportunidades de coliving de alto rendimiento. Buscamos, remodelamos y gestionamos propiedades para obtener los máximos retornos.",
+        "quickLinks": {
+            "title": "Enlaces Rápidos",
+            "links": [
+                "Por qué Coliving",
+                "Modelo de Inversión",
+                "Ventajas",
+                "Experiencia Llave en Mano"
+            ]
+        },
+        "resources": {
+            "title": "Recursos",
+            "links": [
+                "Dossier de Inversor",
+                "Casos de Estudio",
+                "Preguntas Frecuentes",
+                "Contáctanos"
+            ]
+        },
+        "copyright": "© 2024 Miami Co-Living Deals. Todos los derechos reservados.",
+        "privacy": "Política de Privacidad",
+        "terms": "Términos de Servicio"
+    },
+    "contact": {
+        "subtitle": "Contáctanos",
+        "title": "Contacto",
+        "description": "¿Tienes preguntas sobre nuestras oportunidades de inersión en coliving? Estamos aquí para ayudar.",
+        "form": {
+            "title": "Envíanos un Mensaje",
+            "labels": {
+                "name": "Nombre Completo",
+                "email": "Correo Electrónico",
+                "subject": "Asunto",
+                "message": "Mensaje"
+            },
+            "placeholders": {
+                "name": "Juan Pérez",
+                "email": "juan@ejemplo.com",
+                "subject": "Consulta de Inversión",
+                "message": "Cuéntanos sobre tus objetivos de inversión..."
+            },
+            "submit": "Enviar",
+            "sending": "Enviando...",
+            "success": "¡Gracias! Tu mensaje ha sido enviado a nuestro equipo.",
+            "error": "Algo salió mal. Por favor, inténtalo de nuevo.",
+            "connectionError": "Error de conexión. Por favor revisa tu internet."
+        }
+    }
+}

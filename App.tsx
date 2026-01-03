@@ -1,4 +1,7 @@
-import React, { useState, useEffect } from 'react';
+
+import { useState, useEffect } from 'react';
+import { Routes, Route, Navigate, useParams, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { NavBar } from './components/NavBar';
 import { Hero } from './components/Hero';
 import { WhyColiving } from './components/WhyColiving';
@@ -12,26 +15,22 @@ import { CTASection } from './components/CTASection';
 import { Footer } from './components/Footer';
 import { Contact } from './components/Contact';
 
-function App() {
+function PageContent() {
   const [currentPage, setCurrentPage] = useState('home');
+  const location = useLocation();
 
   useEffect(() => {
     const handleHashChange = () => {
-      const hash = window.location.hash.slice(1); // Remove the '#'
+      const hash = location.hash.slice(1);
       setCurrentPage(hash || 'home');
-      window.scrollTo(0, 0); // Scroll to top on page change
+      window.scrollTo(0, 0);
     };
 
-    // Set initial page based on hash
     handleHashChange();
-
-    // Listen for hash changes
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
-  }, []);
+  }, [location]);
 
   return (
-    <div className="bg-brand-dark min-h-screen text-white font-sans selection:bg-brand-gold selection:text-brand-dark">
+    <>
       <NavBar />
       {currentPage === 'contact' ? (
         <Contact />
@@ -49,7 +48,38 @@ function App() {
         </>
       )}
       <Footer />
+    </>
+  );
+}
+
+function Layout() {
+  const { i18n } = useTranslation();
+  const { lang } = useParams();
+
+  useEffect(() => {
+    if (lang && ['en', 'es'].includes(lang)) {
+      i18n.changeLanguage(lang);
+    }
+  }, [lang, i18n]);
+
+  // Validate language
+  if (lang && !['en', 'es'].includes(lang)) {
+    return <Navigate to="/en" replace />;
+  }
+
+  return (
+    <div className="bg-brand-dark min-h-screen text-white font-sans selection:bg-brand-gold selection:text-brand-dark">
+      <PageContent />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/:lang" element={<Layout />} />
+      <Route path="/" element={<Navigate to="/en" replace />} />
+    </Routes>
   );
 }
 

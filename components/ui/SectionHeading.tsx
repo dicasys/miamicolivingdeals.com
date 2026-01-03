@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 
 interface SectionHeadingProps {
@@ -9,16 +9,16 @@ interface SectionHeadingProps {
   light?: boolean;
 }
 
-export const SectionHeading: React.FC<SectionHeadingProps> = ({ 
-  eyebrow, 
-  title, 
-  description, 
+export const SectionHeading: React.FC<SectionHeadingProps> = ({
+  eyebrow,
+  title,
+  description,
   center = true,
   light = false
 }) => {
   return (
     <div className={`mb-16 ${center ? 'text-center' : 'text-left'} max-w-4xl mx-auto`}>
-      <motion.span 
+      <motion.span
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -27,7 +27,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
       >
         {eyebrow}
       </motion.span>
-      <motion.h2 
+      <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -37,7 +37,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
         {title}
       </motion.h2>
       {description && (
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

@@ -1,9 +1,10 @@
-import React from 'react';
+
 import { SectionHeading } from './ui/SectionHeading';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const StepCard = ({ number, title, subtitle, description }: any) => (
-  <motion.div 
+  <motion.div
     initial={{ opacity: 0, scale: 0.9 }}
     whileInView={{ opacity: 1, scale: 1 }}
     viewport={{ once: true }}
@@ -21,33 +22,35 @@ const StepCard = ({ number, title, subtitle, description }: any) => (
 );
 
 export const ProcessSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="py-24 bg-brand-surface border-t border-white/5">
       <div className="container mx-auto px-6">
-        <SectionHeading 
-          eyebrow="What We Do"
-          title="The Coliving Advantage"
-          description="We handle everything so you can enjoy passive income from your investment."
+        <SectionHeading
+          eyebrow={t('process.eyebrow')}
+          title={t('process.title')}
+          description={t('process.description')}
         />
 
         <div className="grid md:grid-cols-3 gap-8">
-          <StepCard 
+          <StepCard
             number="1"
-            title="Property Marketing"
-            subtitle="Maximizing Property Exposure"
-            description="We employ strategic marketing techniques to maximize your property's exposure and attract quality tenants. From professional photography to targeted advertising."
+            title={t('process.steps.marketing.title')}
+            subtitle={t('process.steps.marketing.subtitle')}
+            description={t('process.steps.marketing.description')}
           />
-          <StepCard 
+          <StepCard
             number="2"
-            title="Tenant Relations"
-            subtitle="Building Strong Tenant Relationships"
-            description="Our focus goes beyond filling your property. We provide thorough screening with detailed questionnaires, prioritize open communication, and foster positive living experiences."
+            title={t('process.steps.relations.title')}
+            subtitle={t('process.steps.relations.subtitle')}
+            description={t('process.steps.relations.description')}
           />
-          <StepCard 
+          <StepCard
             number="3"
-            title="Property Maintenance"
-            subtitle="Efficient Property Upkeep"
-            description="We oversee all aspects of property maintenance, from regular upkeep to emergency repairs. Our goal is to maintain your property's value while ensuring tenant satisfaction."
+            title={t('process.steps.maintenance.title')}
+            subtitle={t('process.steps.maintenance.subtitle')}
+            description={t('process.steps.maintenance.description')}
           />
         </div>
       </div>

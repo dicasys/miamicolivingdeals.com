@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button } from './ui/Button';
 import { Menu, X } from 'lucide-react';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 export const NavBar = () => {
+  const { t } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -13,10 +16,10 @@ export const NavBar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Why Coliving', href: '#why-coliving' },
-    { name: 'The Model', href: '#the-model' },
-    { name: 'Advantages', href: '#advantages' },
-    { name: 'Experience', href: '#experience' },
+    { name: t('nav.whyColiving'), href: '#why-coliving' },
+    { name: t('nav.theModel'), href: '#the-model' },
+    { name: t('nav.advantages'), href: '#advantages' },
+    { name: t('nav.experience'), href: '#experience' },
   ];
 
   return (
@@ -37,20 +40,24 @@ export const NavBar = () => {
               {link.name}
             </a>
           ))}
+          <LanguageSwitcher />
           <a href="#contact">
-            <Button variant="primary">Get Started</Button>
+            <Button variant="primary">{t('nav.getStarted')}</Button>
           </a>
         </div>
 
         {/* Mobile Toggle */}
-        <button
-          className="md:hidden text-white"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle mobile menu"
-          aria-expanded={mobileMenuOpen}
-        >
-          {mobileMenuOpen ? <X /> : <Menu />}
-        </button>
+        <div className="md:hidden flex items-center gap-4">
+          <LanguageSwitcher />
+          <button
+            className="text-white"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle mobile menu"
+            aria-expanded={mobileMenuOpen}
+          >
+            {mobileMenuOpen ? <X /> : <Menu />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -67,7 +74,7 @@ export const NavBar = () => {
             </a>
           ))}
           <a href="#contact">
-            <Button variant="primary" fullWidth>Get Started</Button>
+            <Button variant="primary" fullWidth>{t('nav.getStarted')}</Button>
           </a>
         </div>
       )}

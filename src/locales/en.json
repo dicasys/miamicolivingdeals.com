@@ -1,0 +1,188 @@
+{
+    "common": {
+        "loading": "Loading..."
+    },
+    "nav": {
+        "whyColiving": "Why Coliving",
+        "theModel": "The Model",
+        "advantages": "Advantages",
+        "experience": "Experience",
+        "getStarted": "Get Started"
+    },
+    "hero": {
+        "tagline": "High-Yield Real Estate Investments",
+        "headline": "The Future of Real Estate Yield: <1>High-Margin Coliving</1> Investments",
+        "description": "Stop settling for single-digit returns. Leverage the \"Space-as-a-Service\" model to achieve multifamily margins with residential debt.",
+        "viewOpportunities": "View Current Opportunities",
+        "downloadDeck": "Download Investor Deck"
+    },
+    "whyColiving": {
+        "eyebrow": "Why Coliving?",
+        "title": "Unprecedented Financial Performance",
+        "description": "Traditional residential investing is facing a squeeze. Coliving solves this by maximizing the efficiency of a property's footprint.",
+        "stats": {
+            "margins": {
+                "title": "Higher Operating Margins",
+                "description": "Compared to conventional multifamily buildings, maximizing efficiency."
+            },
+            "income": {
+                "title": "Rental Income",
+                "description": "Triple the income of standard investments on the same street."
+            },
+            "cashflow": {
+                "title": "Positive Cash Flow",
+                "description": "Through optimized per-square-foot rents and turnkey delivery."
+            },
+            "recession": {
+                "title": "Recession-Resistant",
+                "description": "Affordability is the ultimate hedge in any economy."
+            }
+        }
+    },
+    "analogy": {
+        "eyebrow": "The Multi-Engine Advantage",
+        "title": "\"Investing in traditional rentals is like flying a single-engine plane...\"",
+        "p1": "If that one engine (your tenant) fails, the plane goes down.",
+        "p2": "Coliving is a <1>multi-engine jet</1>. If one engine fails, the others keep the investment airborne and moving toward its financial destination without disruption.",
+        "cards": {
+            "diversified": {
+                "title": "Diversified Income",
+                "description": "Rent is collected from multiple individual members, ensuring a single vacancy never zeros out your monthly cash flow."
+            },
+            "counterCyclical": {
+                "title": "Counter-Cyclical Demand",
+                "description": "As consumers seek to cut expenses, the demand for high-quality, lower-cost shared living options increases."
+            }
+        }
+    },
+    "floorplan": {
+        "title": "Optimized Floor Plans",
+        "description": "By transforming a traditional layout into a high-utility coliving space—such as converting a three-bedroom home into a seven-bedroom asset—we unlock a new tier of profitability."
+    },
+    "demographics": {
+        "eyebrow": "Capturing Massive Demand",
+        "title": "Targeting the Largest Segment of the American Labor Force",
+        "description": "We're focused on Millennials and Gen Z—the demographics reshaping how America lives. Modern renters value flexibility, the sharing economy, and all-inclusive convenience over long-term leases and utility bills.",
+        "tags": {
+            "target": "Targeted Demographics",
+            "preferences": "Modern Preferences",
+            "tech": "Tech-Forward Living"
+        },
+        "stats": {
+            "households": {
+                "title": "Single-person households",
+                "description": "Earn less than $35K/year and are currently priced out of the traditional market."
+            },
+            "generation": {
+                "title": "Millennials & Gen Z",
+                "description": "Prefer flexibility and all-inclusive convenience over ownership."
+            },
+            "solution": {
+                "title": "Housing Crisis Solution",
+                "description": "Addressing the national affordability gap head-on."
+            }
+        }
+    },
+    "financing": {
+        "eyebrow": "Financing Wizardry",
+        "title": "Superior Debt & Tax Advantages",
+        "description": "We don't just find great properties; we utilize strategic financing to maximize your internal rate of return (IRR).",
+        "features": {
+            "debt": {
+                "title": "Residential Debt, Commercial Returns",
+                "description": "Leverage 30-year fixed-rate debt on properties that produce multifamily-level cash flow, avoiding the volatility of commercial bridge loans."
+            },
+            "velocity": {
+                "title": "Velocity of Capital",
+                "description": "Our high cash-flow model allows for swift refinancing maneuvers, often enabling investors to recoup their initial capital tax-free within months."
+            },
+            "tax": {
+                "title": "Tax Optimization",
+                "description": "Maximize depreciation benefits and leverage cost segregation studies to significantly reduce your tax burden from day one."
+            }
+        }
+    },
+    "process": {
+        "eyebrow": "What We Do",
+        "title": "The Coliving Advantage",
+        "description": "We handle everything so you can enjoy passive income from your investment.",
+        "steps": {
+            "marketing": {
+                "title": "Property Marketing",
+                "subtitle": "Maximizing Property Exposure",
+                "description": "We employ strategic marketing techniques to maximize your property's exposure and attract quality tenants. From professional photography to targeted advertising."
+            },
+            "relations": {
+                "title": "Tenant Relations",
+                "subtitle": "Building Strong Tenant Relationships",
+                "description": "Our focus goes beyond filling your property. We provide thorough screening with detailed questionnaires, prioritize open communication, and foster positive living experiences."
+            },
+            "maintenance": {
+                "title": "Property Maintenance",
+                "subtitle": "Efficient Property Upkeep",
+                "description": "We oversee all aspects of property maintenance, from regular upkeep to emergency repairs. Our goal is to maintain your property's value while ensuring tenant satisfaction."
+            }
+        }
+    },
+    "testimonials": {
+        "eyebrow": "Testimonials",
+        "title": "What Our Investors Say",
+        "description": "Hear directly from real investors about their experience with Miami co-living investments."
+    },
+    "cta": {
+        "eyebrow": "Start Your Journey",
+        "title": "Ready to Outperform the Market?",
+        "description": "Don't wait for the next market cycle to find yield. Join the investors who are already scaling their portfolios with the most resilient asset class in modern real estate.",
+        "button": "Schedule a Call with Our Team",
+        "footer": "Discover how we can help you build a recession-proof, high-yield portfolio today."
+    },
+    "footer": {
+        "description": "Transforming real estate investment through high-yield coliving opportunities. We source, remodel, and manage properties for maximum returns.",
+        "quickLinks": {
+            "title": "Quick Links",
+            "links": [
+                "Why Coliving",
+                "Investment Model",
+                "Advantages",
+                "Turnkey Experience"
+            ]
+        },
+        "resources": {
+            "title": "Resources",
+            "links": [
+                "Investor Deck",
+                "Case Studies",
+                "FAQ",
+                "Contact Us"
+            ]
+        },
+        "copyright": "© 2024 Miami Co-Living Deals. All rights reserved.",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service"
+    },
+    "contact": {
+        "subtitle": "Get In Touch",
+        "title": "Contact Us",
+        "description": "Have questions about our high-yield co-living opportunities? We're here to help.",
+        "form": {
+            "title": "Send us a Message",
+            "labels": {
+                "name": "Full Name",
+                "email": "Email Address",
+                "subject": "Subject",
+                "message": "Message"
+            },
+            "placeholders": {
+                "name": "John Doe",
+                "email": "john@example.com",
+                "subject": "Investment Inquiry",
+                "message": "Tell us about your investment goals..."
+            },
+            "submit": "Submit",
+            "sending": "Sending...",
+            "success": "Thank you! Your message has been sent to our team.",
+            "error": "Something went wrong. Please try again.",
+            "connectionError": "Connection error. Please check your internet and try again."
+        }
+    }
+}

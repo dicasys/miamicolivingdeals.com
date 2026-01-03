@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Send } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 export const Contact = () => {
+    const { t } = useTranslation();
     const [isSuccess, setIsSuccess] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [result, setResult] = useState("");
+    const [errorMessage, setErrorMessage] = useState("");
 
     const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         setIsSubmitting(true);
-        setResult("Sending....");
+        setErrorMessage("");
 
         // Create FormData object from the form
         const formData = new FormData(event.currentTarget);
@@ -24,19 +26,18 @@ export const Contact = () => {
             const data = await response.json();
 
             if (data.success) {
-                setResult("Thank you! Your message has been sent to our team.");
                 setIsSuccess(true);
                 // Reset the form
                 event.currentTarget.reset();
             } else {
                 console.error("Error submitting form", data);
                 setIsSuccess(false);
-                setResult(data.message || "Something went wrong. Please try again.");
+                setErrorMessage(data.message || t('contact.form.error'));
             }
         } catch (error) {
             console.error("Error submitting form", error);
             setIsSuccess(false);
-            setResult("Connection error. Please check your internet and try again.");
+            setErrorMessage(t('contact.form.connectionError'));
         } finally {
             setIsSubmitting(false);
         }
@@ -58,13 +59,13 @@ export const Contact = () => {
                         transition={{ duration: 0.6 }}
                     >
                         <div className="inline-block mb-4 px-4 py-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/10 backdrop-blur-sm">
-                            <span className="text-brand-gold text-xs font-bold tracking-widest uppercase">Get In Touch</span>
+                            <span className="text-brand-gold text-xs font-bold tracking-widest uppercase">{t('contact.subtitle')}</span>
                         </div>
                         <h1 className="font-serif text-4xl md:text-6xl font-medium text-white mb-6">
-                            Contact Us
+                            {t('contact.title')}
                         </h1>
                         <p className="text-xl text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">
-                            Have questions about our high-yield co-living opportunities? We're here to help.
+                            {t('contact.description')}
                         </p>
                     </motion.div>
                 </div>
@@ -80,7 +81,7 @@ export const Contact = () => {
                             transition={{ duration: 0.6, delay: 0.1 }}
                             className="bg-brand-surface p-8 md:p-10 rounded-2xl border border-white/10 shadow-2xl relative"
                         >
-                            <h3 className="font-serif text-2xl text-white mb-6 text-center">Send us a Message</h3>
+                            <h3 className="font-serif text-2xl text-white mb-6 text-center">{t('contact.form.title')}</h3>
 
                             <form onSubmit={onSubmit} className="space-y-6">
                                 {/* Web3Forms Access Key */}
@@ -93,50 +94,50 @@ export const Contact = () => {
                                 <input type="hidden" name="redirect" value="https://miamicolivingdeals.com/thanks.html" />
 
                                 <div className="space-y-2">
-                                    <label htmlFor="name" className="text-sm font-medium text-slate-300">Full Name</label>
+                                    <label htmlFor="name" className="text-sm font-medium text-slate-300">{t('contact.form.labels.name')}</label>
                                     <input
                                         type="text"
                                         id="name"
                                         name="name"
                                         required
                                         className="w-full bg-brand-dark border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors"
-                                        placeholder="John Doe"
+                                        placeholder={t('contact.form.placeholders.name')}
                                     />
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label htmlFor="email" className="text-sm font-medium text-slate-300">Email Address</label>
+                                    <label htmlFor="email" className="text-sm font-medium text-slate-300">{t('contact.form.labels.email')}</label>
                                     <input
                                         type="email"
                                         id="email"
                                         name="email"
                                         required
                                         className="w-full bg-brand-dark border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors"
-                                        placeholder="john@example.com"
+                                        placeholder={t('contact.form.placeholders.email')}
                                     />
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label htmlFor="subject" className="text-sm font-medium text-slate-300">Subject</label>
+                                    <label htmlFor="subject" className="text-sm font-medium text-slate-300">{t('contact.form.labels.subject')}</label>
                                     <input
                                         type="text"
                                         id="subject"
                                         name="subject"
                                         required
                                         className="w-full bg-brand-dark border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors"
-                                        placeholder="Investment Inquiry"
+                                        placeholder={t('contact.form.placeholders.subject')}
                                     />
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label htmlFor="message" className="text-sm font-medium text-slate-300">Message</label>
+                                    <label htmlFor="message" className="text-sm font-medium text-slate-300">{t('contact.form.labels.message')}</label>
                                     <textarea
                                         id="message"
                                         name="message"
                                         rows={4}
                                         required
                                         className="w-full bg-brand-dark border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors resize-none"
-                                        placeholder="Tell us about your investment goals..."
+                                        placeholder={t('contact.form.placeholders.message')}
                                     ></textarea>
                                 </div>
 
@@ -147,7 +148,7 @@ export const Contact = () => {
                                 >
                                     <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent z-0"></div>
                                     <span className="relative z-10 flex items-center gap-2">
-                                        {isSubmitting ? 'Sending...' : 'Submit'} <Send className="w-4 h-4" />
+                                        {isSubmitting ? t('contact.form.sending') : t('contact.form.submit')} <Send className="w-4 h-4" />
                                     </span>
                                 </button>
                             </form>
@@ -158,7 +159,17 @@ export const Contact = () => {
                                     animate={{ opacity: 1, y: 0 }}
                                     className="mt-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-200 text-center font-medium"
                                 >
-                                    Thank you! Your message has been sent to our team.
+                                    {t('contact.form.success')}
+                                </motion.div>
+                            )}
+
+                            {errorMessage && !isSuccess && (
+                                <motion.div
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    className="mt-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg text-red-200 text-center font-medium"
+                                >
+                                    {errorMessage}
                                 </motion.div>
                             )}
                         </motion.div>

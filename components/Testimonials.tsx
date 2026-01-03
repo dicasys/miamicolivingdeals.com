@@ -1,15 +1,18 @@
-import React from 'react';
+
 import { SectionHeading } from './ui/SectionHeading';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 export const Testimonials = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="experience" className="py-24 bg-brand-dark">
       <div className="container mx-auto px-6">
         <SectionHeading
-          eyebrow="Testimonials"
-          title="What Our Investors Say"
-          description="Hear directly from real investors about their experience with Miami co-living investments."
+          eyebrow={t('testimonials.eyebrow')}
+          title={t('testimonials.title')}
+          description={t('testimonials.description')}
         />
 
         {/* YouTube Video Testimonial */}
