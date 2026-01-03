@@ -13,14 +13,6 @@ export const Footer = () => {
             <p className="text-slate-400 text-sm leading-relaxed max-w-sm mb-6">
               Transforming real estate investment through high-yield coliving opportunities. We source, remodel, and manage properties for maximum returns.
             </p>
-            <div className="space-y-2">
-              <a href="mailto:invest@miamicolivingdeals.com" className="flex items-center gap-3 text-slate-400 hover:text-brand-gold text-sm transition-colors">
-                <Mail size={16} /> invest@miamicolivingdeals.com
-              </a>
-              <a href="tel:1234567890" className="flex items-center gap-3 text-slate-400 hover:text-brand-gold text-sm transition-colors">
-                <Phone size={16} /> (123) 456-7890
-              </a>
-            </div>
           </div>
 
           <div>
