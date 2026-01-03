@@ -7,9 +7,8 @@ export const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-4 gap-12 mb-16">
           <div className="lg:col-span-2">
-            <a href="#" className="font-serif text-xl font-bold text-white flex items-center gap-2 mb-6">
-               <div className="w-6 h-6 bg-brand-gold rounded-br-lg rounded-tl-lg"></div>
-               Miami Co-Living
+            <a href="#" className="flex items-center mb-6">
+              <img src="/logo.png" alt="Miami Co-Living" className="h-60 w-auto" />
             </a>
             <p className="text-slate-400 text-sm leading-relaxed max-w-sm mb-6">
               Transforming real estate investment through high-yield coliving opportunities. We source, remodel, and manage properties for maximum returns.
