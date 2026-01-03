@@ -22,9 +22,8 @@ export const NavBar = () => {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-brand-dark/90 backdrop-blur-md py-4 border-b border-white/5' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <a href="#" className="font-serif text-xl font-bold text-white flex items-center gap-2">
-          <img src="/logo.png" alt="Miami Co-Living" className="h-10 w-auto" />
-          Miami Co-Living
+        <a href="#" className="flex items-center">
+          <img src="/logo.png" alt="Miami Co-Living" className="h-12 w-auto" />
         </a>
 
         {/* Desktop Nav */}
