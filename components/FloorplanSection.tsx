@@ -3,13 +3,13 @@ import { motion } from 'framer-motion';
 
 export const FloorplanSection = () => {
   return (
-    <section id="the-model" className="py-24 bg-[#fdfaf5] text-brand-dark relative">
+    <section id="the-model" className="py-24 bg-[#1E293B] text-white relative">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="font-serif text-3xl md:text-4xl font-medium mb-6">
             Optimized Floor Plans
           </h2>
-          <p className="text-slate-600">
+          <p className="text-slate-300">
             By transforming a traditional layout into a high-utility coliving space—such as converting a three-bedroom home into a seven-bedroom asset—we unlock a new tier of profitability.
           </p>
         </div>
